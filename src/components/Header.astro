@@ -1,3 +1,36 @@
-<h1 class="flex text-3xl font-bold underline">
-    Javier Cuesta
-</h1>
+<header class="flex justify-between items-center mx-auto py-5 w-4/5">
+    <!-- TODO: Logo -->
+    <h1 class="flex text-3xl font-bold opacity-80">Javier Cuesta</h1>
+    <nav class="flex flew-row gap-x-12 opacity-80">
+        <a class={"link-style"} href="/">Home</a>
+        <a class={"link-style"} href="/Projects">Projects</a>
+        <a class={"link-style"} href="/About">About</a>
+    </nav>
+</header>
+
+<style>
+    .link-style {
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 2px;
+        padding-top: 10px;
+    }
+
+    .link-style::after {
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        opacity: 80;
+        transition:
+            width 0.3s ease 0s,
+            left 0.3s ease 0s;
+        width: 0;
+    }
+    a:hover:after {
+        width: 100%;
+        left: 0%;
+    }
+</style>
